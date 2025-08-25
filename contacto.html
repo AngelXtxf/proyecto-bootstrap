@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | GEL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">GEL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="acerca.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: 56px; background-color: var(--color-gradient-mid);">
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="fw-bold">Hablemos</h1>
+          <p class="text-secondary">¿Tienes una idea o un proyecto en mente? Me encantaría escucharlo.</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card card-glass p-4 p-md-5">
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombre" required minlength="3">
+                        <div class="invalid-feedback">Ingresa tu nombre (mín. 3 caracteres).</div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">Ingresa un correo válido.</div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="telefono" class="form-label">Teléfono (Opcional)</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                          <input type="tel" class="form-control" id="telefono" pattern="[0-9]{10}" placeholder="10 dígitos">
+                          <div class="invalid-feedback">Ingresa un número de 10 dígitos.</div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="motivo" class="form-label">Motivo de contacto</label>
+                        <select class="form-select" id="motivo" required>
+                          <option selected disabled value="">Selecciona una opción...</option>
+                          <option value="cotizacion">Cotización</option>
+                          <option value="colaboracion">Colaboración</option>
+                          <option value="soporte">Soporte</option>
+                          <option value="otro">Otro</option>
+                        </select>
+                        <div class="invalid-feedback">Por favor, selecciona un motivo.</div>
+                      </div>
+
+                      <div class="col-12">
+                        <label class="form-label">Preferencia de contacto</label>
+                        <div class="d-flex">
+                          <div class="form-check me-4">
+                            <input class="form-check-input" type="radio" name="preferenciaContacto" id="radioEmail" value="email" required>
+                            <label class="form-check-label" for="radioEmail">
+                              Email
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="preferenciaContacto" id="radioTelefono" value="telefono" required>
+                            <label class="form-check-label" for="radioTelefono">
+                              Teléfono
+                            </label>
+                            <div class="invalid-feedback">Debes seleccionar una preferencia.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label for="asunto" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="asunto" required minlength="5">
+                        <div class="invalid-feedback">El asunto es muy corto.</div>
+                      </div>
+                      <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="5" required minlength="10"></textarea>
+                        <div class="invalid-feedback">Tu mensaje debe tener al menos 10 caracteres.</div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="consentimiento" required>
+                          <label class="form-check-label" for="consentimiento">Acepto el aviso de privacidad</label>
+                          <div class="invalid-feedback">Debes aceptar los términos.</div>
+                        </div>
+                      </div>
+                      <div class="col-12 text-center pt-3">
+                        <button class="btn btn-gradient btn-lg px-5" type="submit">Enviar Mensaje</button>
+                        <button class="btn btn-outline-light btn-lg" type="reset">Limpiar</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pt-5 pb-4" style="background-color: var(--color-surface);">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold">GEL</h5>
+          <p class="text-secondary">Tecnología hecha para crecer contigo.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold">Mapa del Sitio</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-secondary text-decoration-none">Inicio</a></li>
+            <li><a href="proyectos.html" class="text-secondary text-decoration-none">Proyectos</a></li>
+            <li><a href="acerca.html" class="text-secondary text-decoration-none">Acerca de</a></li>
+            <li><a href="contacto.html" class="text-secondary text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold">Contacto</h5>
+          <p>
+            <a href="mailto:angeltlapa975@gmail.com" class="text-secondary text-decoration-none">angeltlapa975@gmail.com</a>
+          </p>
+          <div>
+            <a href="https://es.linkedin.com/" class="me-3 social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/AngelXtxf" class="me-3 social-icon"><i class="bi bi-github"></i></a>
+            <a href="https://x.com/Angelluxou" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color: var(--color-border);">
+      <div class="row">
+        <div class="col text-center">
+          <small class="text-secondary">&copy; 2025, Jose Angel Tlapa Tome. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    (() => {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+  </script>
+</body>
+</html>
